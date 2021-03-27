@@ -294,7 +294,9 @@ pushd package/lean/luci-app-zerotier
 bash move_2_services.sh
 popd
 rm -rf ./feeds/packages/net/zerotier/files/etc/init.d/zerotier
-
+# 添加多拨控制
+rm -rf ./package/lean/luci-app-syncdial
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-syncdial package/lean/luci-app-syncdial
 
 ### 最后的收尾工作 ###
 # Lets Fuck
