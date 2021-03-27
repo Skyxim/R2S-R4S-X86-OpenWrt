@@ -1,6 +1,7 @@
 name: R4S-OpenWrt
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: 5 6 * * 0
   watch:
@@ -116,13 +117,14 @@ jobs:
       run: |
         rm -rf ./artifact/
         mkdir -p ./artifact/
-        mv openwrt/bin/targets/rockchip/armv8/*sysupgrade.img* ./artifact/
+        mv openwrt/bin/targets/rockchip/armv8/* ./artifact/
         cd ./artifact/
         ls -Ahl
         gzip -d *.gz && exit 0
         gzip --best *.img
         ls -Ahl
         sha256sum openwrt*r4s* | tee R4S-GC404-$(date +%Y-%m-%d)-21.02.sha256sum
+        zip R4S-GC404-$(date +%Y-%m-%d)-21.02-rootfs.zip *rootfs*
         zip R4S-GC404-$(date +%Y-%m-%d)-21.02-ext4.zip *r4s*ext4*
         zip R4S-GC404-$(date +%Y-%m-%d)-21.02-sfs.zip *r4s*squashfs*
         ls -Ahl
