@@ -124,7 +124,7 @@ jobs:
         gzip --best *.img
         ls -Ahl
         sha256sum openwrt*r4s* | tee R4S-GC404-$(date +%Y-%m-%d)-21.02.sha256sum
-        zip R4S-GC404-$(date +%Y-%m-%d)-21.02-rootfs.zip *rootfs*
+        zip R4S-GC404-$(date +%Y-%m-%d)-21.02-rootfs.zip *r4s*rootfs*
         zip R4S-GC404-$(date +%Y-%m-%d)-21.02-ext4.zip *r4s*ext4*
         zip R4S-GC404-$(date +%Y-%m-%d)-21.02-sfs.zip *r4s*squashfs*
         ls -Ahl
