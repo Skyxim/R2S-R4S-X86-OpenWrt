@@ -122,6 +122,7 @@ jobs:
         cd packages/
         zip -r ../packages.zip *
         cd ..
+        rm -rf packages/
         ls -Ahl
         sha256sum openwrt*r4s* | tee R4S-GC404-$(date +%Y-%m-%d)-21.02.sha256sum
     - name: Upload artifact
