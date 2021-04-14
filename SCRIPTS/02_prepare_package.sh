@@ -64,23 +64,23 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/a
 rm -rf ./feeds/packages/utils/coremark
 svn co https://github.com/immortalwrt/packages/trunk/utils/coremark feeds/packages/utils/coremark
 # 更换 Nodejs 版本
-rm -rf ./feeds/packages/lang/node
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node feeds/packages/lang/node
-rm -rf ./feeds/packages/lang/node-arduino-firmata
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-arduino-firmata feeds/packages/lang/node-arduino-firmata
-rm -rf ./feeds/packages/lang/node-cylon
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-cylon feeds/packages/lang/node-cylon
-rm -rf ./feeds/packages/lang/node-hid
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-hid feeds/packages/lang/node-hid
-rm -rf ./feeds/packages/lang/node-homebridge
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-homebridge feeds/packages/lang/node-homebridge
-rm -rf ./feeds/packages/lang/node-serialport
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-serialport feeds/packages/lang/node-serialport
-rm -rf ./feeds/packages/lang/node-serialport-bindings
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-serialport-bindings feeds/packages/lang/node-serialport-bindings
-rm -rf ./feeds/packages/lang/node-yarn
-svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-yarn feeds/packages/lang/node-yarn
-ln -sf ../../../feeds/packages/lang/node-yarn ./package/feeds/packages/node-yarn
+#rm -rf ./feeds/packages/lang/node
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node feeds/packages/lang/node
+#rm -rf ./feeds/packages/lang/node-arduino-firmata
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-arduino-firmata feeds/packages/lang/node-arduino-firmata
+#rm -rf ./feeds/packages/lang/node-cylon
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-cylon feeds/packages/lang/node-cylon
+#rm -rf ./feeds/packages/lang/node-hid
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-hid feeds/packages/lang/node-hid
+#rm -rf ./feeds/packages/lang/node-homebridge
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-homebridge feeds/packages/lang/node-homebridge
+#rm -rf ./feeds/packages/lang/node-serialport
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-serialport feeds/packages/lang/node-serialport
+#rm -rf ./feeds/packages/lang/node-serialport-bindings
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-serialport-bindings feeds/packages/lang/node-serialport-bindings
+#rm -rf ./feeds/packages/lang/node-yarn
+#svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-yarn feeds/packages/lang/node-yarn
+#ln -sf ../../../feeds/packages/lang/node-yarn ./package/feeds/packages/node-yarn
 # R8168驱动
 svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/r8168 package/new/r8168
 patch -p1 < ../PATCH/new/main/r8168-fix_LAN_led-for_r4s-from_TL.patch
