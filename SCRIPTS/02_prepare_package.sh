@@ -95,8 +95,8 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/master/tools/ucl tool
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-accesscontrol package/lean/luci-app-accesscontrol
 cp -rf ../PATCH/duplicate/luci-app-control-weburl ./package/new/luci-app-control-weburl
 # 广告过滤 Adbyby
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-adbyby-plus package/lean/luci-app-adbyby-plus
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/adbyby package/lean/adbyby
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-adbyby-plus package/lean/luci-app-adbyby-plus
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/adbyby package/lean/adbyby
 # 广告过滤 AdGuard
 cp -rf ../openwrt-lienol/package/diy/luci-app-adguardhome ./package/new/luci-app-adguardhome
 rm -rf ./feeds/packages/net/adguardhome
@@ -116,8 +116,8 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-autorebo
 svn co https://github.com/ryohuang/slim-wrt/trunk/slimapps/application/luci-app-boostupnp package/new/luci-app-boostupnp
 sed -i 's,api.ipify.org,myip.ipip.net/s,g' ./package/new/luci-app-boostupnp/root/usr/sbin/boostupnp.sh
 # ChinaDNS
-git clone -b luci --depth 1 https://github.com/pexcn/openwrt-chinadns-ng.git package/new/luci-app-chinadns-ng
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng
+#git clone -b luci --depth 1 https://github.com/pexcn/openwrt-chinadns-ng.git package/new/luci-app-chinadns-ng
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng
 # 内存压缩
 #wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/2840.patch | patch -p1
 wget -O- https://github.com/NoTengoBattery/openwrt/commit/40f1d5.patch | patch -p1
@@ -185,31 +185,31 @@ git clone -b master --depth 1 https://github.com/NateLol/luci-app-oled.git packa
 # OpenClash
 git clone -b master --depth 1 https://github.com/vernesong/OpenClash.git package/new/luci-app-openclash
 # 花生壳内网穿透
-svn co https://github.com/teasiu/dragino2/trunk/package/teasiu/luci-app-phtunnel package/new/luci-app-phtunnel
-svn co https://github.com/QiuSimons/dragino2-teasiu/trunk/package/teasiu/luci-app-oray package/new/luci-app-oray
-svn co https://github.com/teasiu/dragino2/trunk/package/teasiu/phtunnel package/new/phtunnel
+#svn co https://github.com/teasiu/dragino2/trunk/package/teasiu/luci-app-phtunnel package/new/luci-app-phtunnel
+#svn co https://github.com/QiuSimons/dragino2-teasiu/trunk/package/teasiu/luci-app-oray package/new/luci-app-oray
+#svn co https://github.com/teasiu/dragino2/trunk/package/teasiu/phtunnel package/new/phtunnel
 # Pandownload
 svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/pandownload-fake-server package/lean/pandownload-fake-server
 # Passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
-sed -i 's,default n,default y,g' package/new/luci-app-passwall/Makefile
-sed -i '/V2ray:v2ray/d' package/new/luci-app-passwall/Makefile
-sed -i '/plugin:v2ray/d' package/new/luci-app-passwall/Makefile
-cp -f ../PATCH/new/script/move_2_services.sh ./package/new/luci-app-passwall/move_2_services.sh
-pushd package/new/luci-app-passwall
-bash move_2_services.sh
-popd
-rm -rf ./feeds/packages/net/https-dns-proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping package/new/tcping
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/new/trojan-go
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook package/new/brook
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/new/trojan-plus
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks package/new/ssocks
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core package/new/xray-core
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray package/new/v2ray
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-plugin package/new/v2ray-plugin
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin package/new/xray-plugin
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/new/luci-app-passwall
+#sed -i 's,default n,default y,g' package/new/luci-app-passwall/Makefile
+#sed -i '/V2ray:v2ray/d' package/new/luci-app-passwall/Makefile
+#sed -i '/plugin:v2ray/d' package/new/luci-app-passwall/Makefile
+#cp -f ../PATCH/new/script/move_2_services.sh ./package/new/luci-app-passwall/move_2_services.sh
+#pushd package/new/luci-app-passwall
+#bash move_2_services.sh
+#popd
+#rm -rf ./feeds/packages/net/https-dns-proxy
+#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping package/new/tcping
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/new/trojan-go
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/brook package/new/brook
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/new/trojan-plus
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/ssocks package/new/ssocks
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core package/new/xray-core
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray package/new/v2ray
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-plugin package/new/v2ray-plugin
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin package/new/xray-plugin
 # qBittorrent 下载
 svn co https://github.com/garypang13/openwrt-static-qb/trunk/qBittorrent-Enhanced-Edition package/lean/qBittorrent-Enhanced-Edition
 sed -i 's/4.3.3.10/4.3.4.10/g' package/lean/qBittorrent-Enhanced-Edition/Makefile
@@ -267,31 +267,31 @@ svn co https://github.com/immortalwrt/packages/trunk/libs/rapidjson package/new/
 svn co https://github.com/immortalwrt/packages/trunk/libs/libcron package/new/libcron
 svn co https://github.com/immortalwrt/packages/trunk/libs/quickjspp package/new/quickjspp
 # 网易云音乐解锁
-git clone --depth 1 https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/new/UnblockNeteaseMusic
+#git clone --depth 1 https://github.com/immortalwrt/luci-app-unblockneteasemusic.git package/new/UnblockNeteaseMusic
 # USB 打印机
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-usb-printer package/lean/luci-app-usb-printer
 # UU加速器
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-uugamebooster package/lean/luci-app-uugamebooster
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/uugamebooster package/lean/uugamebooster
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-uugamebooster package/lean/luci-app-uugamebooster
+#svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/uugamebooster package/lean/uugamebooster
 # KMS 激活助手
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-vlmcsd package/lean/luci-app-vlmcsd
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/vlmcsd package/lean/vlmcsd
 # VSSR
-git clone -b master --depth 1 https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
-git clone -b master --depth 1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-sed -i 's,default n,default y,g' package/lean/luci-app-vssr/Makefile
-sed -i '/V2ray:v2ray/d' package/lean/luci-app-vssr/Makefile
-sed -i '/plugin:v2ray/d' package/lean/luci-app-vssr/Makefile
-sed -i '/result.encrypt_method/a\result.fast_open = "1"' package/lean/luci-app-vssr/root/usr/share/vssr/subscribe.lua
-sed -i 's,ispip.clang.cn/all_cn.txt,raw.sevencdn.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute.txt,g' package/lean/luci-app-vssr/luasrc/controller/vssr.lua
-sed -i 's,ispip.clang.cn/all_cn.txt,raw.sevencdn.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute.txt,g' package/lean/luci-app-vssr/root/usr/share/vssr/update.lua
+#git clone -b master --depth 1 https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+#git clone -b master --depth 1 https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+#sed -i 's,default n,default y,g' package/lean/luci-app-vssr/Makefile
+#sed -i '/V2ray:v2ray/d' package/lean/luci-app-vssr/Makefile
+#sed -i '/plugin:v2ray/d' package/lean/luci-app-vssr/Makefile
+#sed -i '/result.encrypt_method/a\result.fast_open = "1"' package/lean/luci-app-vssr/root/usr/share/vssr/subscribe.lua
+#sed -i 's,ispip.clang.cn/all_cn.txt,raw.sevencdn.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute.txt,g' package/lean/luci-app-vssr/luasrc/controller/vssr.lua
+#sed -i 's,ispip.clang.cn/all_cn.txt,raw.sevencdn.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute.txt,g' package/lean/luci-app-vssr/root/usr/share/vssr/update.lua
 # 网络唤醒
 svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-services-wolplus package/new/luci-app-services-wolplus
 # 流量监视
 git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git package/new/wrtbwmon
 git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git package/new/luci-app-wrtbwmon
 # 迅雷快鸟宽带加速
-git clone --depth 1 https://github.com/garypang13/luci-app-xlnetacc.git package/lean/luci-app-xlnetacc
+#git clone --depth 1 https://github.com/garypang13/luci-app-xlnetacc.git package/lean/luci-app-xlnetacc
 # Zerotier
 svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/luci-app-zerotier package/lean/luci-app-zerotier
 cp -f ../PATCH/new/script/move_2_services.sh ./package/lean/luci-app-zerotier/move_2_services.sh
